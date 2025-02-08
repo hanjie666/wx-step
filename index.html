@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信步数刷量 - 每日健康助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>微信步数刷量工具</h1>
+            <nav>
+                <a href="index.html">刷步数</a>
+                <a href="tutorial.html">使用教程</a>
+            </nav>
+        </header>
+
+        <div class="form-container">
+            <form id="stepForm">
+                <div class="form-group">
+                    <label>Zepp Life 账号</label>
+                    <input type="text" id="account" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>目标步数（0-98800）</label>
+                    <input type="number" id="steps" min="0" max="98800" required>
+                </div>
+
+                <button type="submit" class="submit-btn">立即同步步数</button>
+            </form>
+            
+            <div id="result" class="result-box"></div>
+        </div>
+
+        <!-- 广告位预留 -->
+        <div class="ad-placeholder">广告位</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
