@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用教程 - 每日健康助手</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>使用教程</h1>
+            <nav>
+                <a href="index.html">刷步数</a>
+                <a href="tutorial.html">使用教程</a>
+            </nav>
+        </header>
+
+        <div id="tutorial-content" class="markdown-content"></div>
+    </div>
+
+    <script>
+        // 加载并渲染Markdown文档
+        fetch('TUTORIAL.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('tutorial-content').innerHTML = marked.parse(text);
+            });
+    </script>
+</body>
+</html>
